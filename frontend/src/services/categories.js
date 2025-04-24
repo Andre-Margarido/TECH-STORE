@@ -1,3 +1,5 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const getCategories = async () => {
-  return fetch("http://localhost:3000/categories").then((res) => res.json());
+  return fetch(`${API_URL}/categories`).then((res) => res.json());
 };

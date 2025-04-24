@@ -1,5 +1,7 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const register = async (email, password) => {
-  return fetch("http://localhost:3000/auth/sign-up", {
+  return fetch(`${API_URL}/auth/sign-up`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -9,7 +11,7 @@ export const register = async (email, password) => {
 };
 
 export const login = async (email, password) => {
-  return fetch("http://localhost:3000/auth/login", {
+  return fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
